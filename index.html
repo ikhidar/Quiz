@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab 3 - JS Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="card">
+    <h1 id="headerTitle">JavaScript Quiz</h1>
+    <p class="sub">5 questions • 20 points each • Total 100</p>
+  </header>
+
+  <main class="card">
+    <div id="validationFdbk" class="alert"></div>
+
+    <form id="quizForm">
+
+      <section class="question">
+        <h2>1) What does CSS stand for?</h2>
+        <input type="text" id="q1" placeholder="Type your answer..." />
+        <div class="row">
+          <div id="q1Feedback" class="feedback"></div>
+          <div id="markImg1" class="mark"></div>
+        </div>
+      </section>
+
+      <section class="question">
+        <h2>2) Which HTML tag is used to include JavaScript?</h2>
+        <select id="q2">
+          <option value="">-- Choose one --</option>
+          <option value="script">&lt;script&gt;</option>
+          <option value="style">&lt;style&gt;</option>
+          <option value="js">&lt;js&gt;</option>
+          <option value="javascript">&lt;javascript&gt;</option>
+        </select>
+        <div class="row">
+          <div id="q2Feedback" class="feedback"></div>
+          <div id="markImg2" class="mark"></div>
+        </div>
+      </section>
+
+      <section class="question">
+        <h2>3) Select ALL JavaScript primitive types:</h2>
+
+        <div class="options">
+          <input type="checkbox" id="String" value="String" />
+          <label for="String">String</label>
+
+          <input type="checkbox" id="Boolean" value="Boolean" />
+          <label for="Boolean">Boolean</label>
+
+          <input type="checkbox" id="Number" value="Number" />
+          <label for="Number">Number</label>
+
+          <input type="checkbox" id="Array" value="Array" />
+          <label for="Array">Array</label>
+        </div>
+
+        <div class="row">
+          <div id="q3Feedback" class="feedback"></div>
+          <div id="markImg3" class="mark"></div>
+        </div>
+      </section>
+
+      <section class="question">
+        <h2>4) Which one is NOT a JavaScript loop?</h2>
+        <div id="q4Choices" class="options"></div>
+
+        <div class="row">
+          <div id="q4Feedback" class="feedback"></div>
+          <div id="markImg4" class="mark"></div>
+        </div>
+      </section>
+
+      <section class="question">
+        <h2>5) How many bits are in 1 byte?</h2>
+        <div class="sliderRow">
+          <input type="range" id="q5" min="1" max="16" value="8" />
+          <span id="q5Value" class="pill">8</span>
+        </div>
+
+        <div class="row">
+          <div id="q5Feedback" class="feedback"></div>
+          <div id="markImg5" class="mark"></div>
+        </div>
+      </section>
+
+      <button type="button" id="gradeBtn">Grade Quiz</button>
+    </form>
+
+    <hr class="divider" />
+
+    <div class="results">
+      <p id="totalScore" class="big"></p>
+      <p id="totalAttempts"></p>
+      <p id="over80" class="alert"></p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <small>Lab 3 • Plain JavaScript • LocalStorage attempts</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
